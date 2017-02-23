@@ -1,0 +1,15 @@
+<h1>
+  {{title}}
+</h1>
+<strong>Ejemplo del uso de Observables</strong>
+
+<h6>NÜMEROS:</h6>
+<div *ngFor="let valor of valores">Número recibido: {{ valor }}</div>
+
+<h6>ERRORES:</h6>
+<div>Errores: {{errores}}</div>
+
+<h6>TERMINADO:</h6>
+<div>Terminado: {{ terminado }}</div>
+
+<button class='btn btn-primary' (click)='init()'>Comenzar</button>

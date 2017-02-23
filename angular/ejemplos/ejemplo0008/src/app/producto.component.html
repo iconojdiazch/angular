@@ -1,0 +1,14 @@
+<h1>Productos</h1>
+<h2>{{titulo}}</h2>
+<h3>Servicio basado en promesas</h3>
+<h3>
+    <ul *ngFor='let producto of lista'>
+        <li>Id: {{producto.id}}, Nombre: {{producto.nombre}}
+    </ul>
+</h3>
+<h3>Servicio basado en observables</h3>
+<h3>
+    <ul *ngFor='let p of listaObservable | async'>
+        <li>Id: {{p.id}}, Nombre: {{p.nombre}}
+    </ul>
+</h3>
