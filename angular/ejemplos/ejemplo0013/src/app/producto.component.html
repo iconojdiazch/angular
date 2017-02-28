@@ -1,0 +1,18 @@
+<div class="media">
+  <div class="media-left">
+    <a href="#">
+      <img class="media-object img-rounded" src="{{ data.imagenUrl }}">
+    </a>
+  </div>
+  <div class="media-body">
+    <div class="media-body">
+      <h4 class="media-heading">
+        {{ data.nombre }}
+      </h4>
+      {{ data.fecha }}
+      <rating [valor-rating]="data.rating" [revisiones]="data.revisiones">
+      </rating> 
+      <br> {{ data.descripcion }}
+    </div>
+  </div>
+</div>

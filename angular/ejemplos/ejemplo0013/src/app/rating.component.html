@@ -1,0 +1,9 @@
+<span *ngFor="let estrella of estrellas">
+  <i
+    class="glyphicon"
+    [class.glyphicon-star-empty]="rating < estrella"
+    [class.glyphicon-star]="rating >= estrella"  
+    (click)="onClick(estrella)"
+  >
+  </i> 
+</span>Opiniones: {{revisiones}}
