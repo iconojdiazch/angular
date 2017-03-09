@@ -1,0 +1,11 @@
+<h2>Uso de pipes</h2>
+<div *ngFor="let producto of productos">
+  <img src='{{producto.foto}}' alt='Foto producto 1'/>
+  <div >Nombre: {{producto.nombre}}</div>
+  <div >Fecha: {{producto.fecha}}</div>
+  <div >Fecha con pipe: {{producto.fecha | date}}</div>
+  <div >Fecha con pipes encadenadas: {{producto.fecha | date | uppercase}}</div>
+  <div >Fecha con pipe parametrizada: {{producto.fecha | date:"dd/MM/yyyy"}}</div>
+  <div >Descripción: {{producto.descripcion}}</div>
+  <div >Descripción con pipe personalizada: {{producto.descripcion | recortar:11}}</div>
+</div>

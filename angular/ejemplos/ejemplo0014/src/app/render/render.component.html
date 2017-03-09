@@ -1,0 +1,18 @@
+<h2>Productos</h2>
+<div *ngIf="productos.length > 0">
+  <div *ngFor="let producto of productos">
+    <button (click)='vaciar()'>{{producto.nombre}}</button>
+  </div>
+</div>
+<div *ngIf="productos.length == 0">
+  No hay productos para mostrar
+</div>
+<div>
+  <button (click)='llenar()'>Restaurar datos de prueba</button>
+</div>
+<div [ngSwitch]="productos.length">
+  <div *ngSwitchCase="1">Hay un producto</div>
+  <div *ngSwitchCase="2">Hay dos productos</div>
+  <div *ngSwitchCase="3">Hay tres productos</div>
+  <div *ngSwitchDefault>No hay productos o hay más de tres</div>
+</div>
