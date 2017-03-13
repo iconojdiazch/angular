@@ -1,0 +1,18 @@
+Para un control que use la directiva ngModel, si un usuario ha interaccionado con ello,
+la clase css de Angular ng-touched evalúa a true, y ng-untouched a false. La inversa es cierta.
+
+Si el valor del control ha cambiado, su clase ng-dirty avalúa a true y ngpristine a false.
+La inversa es cierta.
+
+Si el valor del control es válido, la clase ng-valid devuelve true y ng-invalid devuelve
+falso. Lo contrario es cierto.
+
+Se pueden mostrar errores de validación específicos:
+<div *ngIf="nombre.touched && nombre.errors">
+    <div class="alert alert-danger" *ngIf="nombre.errors.required">
+        El nombre es obligatorio
+    </div>
+    <div class="alert alert-danger" *ngIf="nombre.errors.minlength">
+        El nombre debería tener un mínimo de 3 caracteres
+    </div>
+</div>

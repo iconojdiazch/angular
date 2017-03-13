@@ -1,0 +1,19 @@
+<form [formGroup]="form" (ngSubmit)="login()">
+  <div class="form-group">
+    <label for="usuario">Nombre</label>
+    <input autofocus id="usuario" type="text" class="form-control" formControlName="usuario">
+    <div *ngIf="form.controls.usuario.touched &&
+!form.controls.usuario.valid" class="alert alert-danger">
+      El nombre de usuario es obligatorio
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="clave">Clave</label>
+    <input id="clave" type="password" class="form-control" formControlName="clave">
+    <div *ngIf="form.controls.clave.touched &&
+!form.controls.clave.valid" class="alert alert-danger">
+      La clave es obligatoria
+    </div>
+  </div>
+  <button class="btn btn-primary" type="submit">Login</button>
+</form>
