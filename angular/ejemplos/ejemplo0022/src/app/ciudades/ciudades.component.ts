@@ -9,19 +9,19 @@ import { Router, ActivatedRoute } from '@angular/router';
 })
 export class CiudadesComponent implements OnInit {
   public codigoPostal: number;
-  private suscripcion;
+  private susbcripcion;
   constructor(private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit() {
     // Recogemos los parametros de la URL
-    this.suscripcion = this.route.params.subscribe(params => {
+    this.susbcripcion = this.route.params.subscribe(params => {
       if (params['id'] != null) {
         this.codigoPostal = params['id'];
       }
     });
   }
   ngOnDestroy() {
-    this.suscripcion.unsubscribe();
+    this.susbcripcion.unsubscribe();
   }
   
   redirigir(): void {
