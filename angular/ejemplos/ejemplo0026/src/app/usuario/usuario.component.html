@@ -14,7 +14,7 @@
       <td>{{ usuario.name }}</td>
       <td>{{ usuario.email }}</td>
       <td>
-        <a>
+        <a [routerLink]="['/nuevo', usuario.$key]">
           <i class="glyphicon glyphicon-edit"></i>
         </a>
       </td>

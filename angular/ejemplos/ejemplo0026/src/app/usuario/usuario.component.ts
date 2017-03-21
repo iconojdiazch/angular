@@ -22,7 +22,7 @@ export class UsuarioComponent implements OnInit {
   }
 
   borrar(usuario) {
-    if (confirm("¿Seguro quieres borrar a " + usuario.name + "?")) {
+    if (confirm("¿Seguro que quieres borrar a " + usuario.name + "?")) {
       this.af.database.object(usuario.$key).remove()
         .then(x => console.log("Borrado"))
         .catch(error => {
