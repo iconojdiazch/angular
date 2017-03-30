@@ -27,7 +27,7 @@ export class LoginComponent implements OnInit {
   }
   login(): void {
     console.log(this.form.value);
-    var resultado = this.ls.login(this.form.controls['usuario'].value,
+    const resultado = this.ls.login(this.form.controls['usuario'].value,
       this.form.controls['clave'].value);
     if (!resultado) {
       this.form.controls['clave'].setErrors({
