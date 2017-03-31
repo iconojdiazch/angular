@@ -1,0 +1,13 @@
+<ul>
+  <li><button (click)="navegar()">Navegar sin directiva</button></li>
+  <li>
+    <button (click)="navegar()" appConfirmar>
+      Navegar con directiva (Cuando aparezca el diálogo, cancelar)
+    </button>
+  </li>
+  <li>
+    <button [appConfirmar]="navegar" mensaje="¿Seguro que quieres ir ahí?">
+      Navegar comunicando directiva con evento
+    </button>
+  </li>
+</ul>

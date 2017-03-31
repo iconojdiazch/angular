@@ -5,11 +5,15 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { RenderComponent } from './render/render.component';
+import { BotonNavegacionComponent } from './boton-navegacion/boton-navegacion.component';
+import { ConfirmarDirective } from './confirmar.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
-    RenderComponent
+    RenderComponent,
+    BotonNavegacionComponent,
+    ConfirmarDirective
   ],
   imports: [
     BrowserModule,
