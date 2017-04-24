@@ -5,8 +5,10 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class ConcatenarPipe implements PipeTransform {
 
-  transform(value: any, args?: any): any {
-    return value + 'abc';
+  transform(value: string, args?: string): string {
+    if(args)
+    return value.toUpperCase() + args;
+    return value.toUpperCase();
   }
 
 }
