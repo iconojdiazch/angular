@@ -10,13 +10,39 @@ import { Usuario } from './usuario';
 })
 export class AppComponent implements OnInit {
   title = 'app works!';
-  private usuario: Usuario = new Usuario();
+  private usuarioGet: Usuario = new Usuario();
+  private usuarioPost: Usuario = new Usuario();
+  private usuarioPut: Usuario = new Usuario();
+  private usuarioDelete: Usuario = new Usuario();
+
   constructor(private usuarioService: UsuarioService) { }
   ngOnInit(): void {
     this.usuarioService.getUsuario().subscribe(
       data => {
-        this.usuario = data;
-        console.log(this.usuario);
+        this.usuarioGet = data;
+        console.log('GET:');
+        console.log(this.usuarioGet);
+      }
+    );
+    this.usuarioService.postUsuario().subscribe(
+      data => {
+        this.usuarioPost = data;
+        console.log('POST:');
+        console.log(this.usuarioPost);
+      }
+    );
+    this.usuarioService.putUsuario().subscribe(
+      data => {
+        this.usuarioPut = data;
+        console.log('PUT:');
+        console.log(this.usuarioPut);
+      }
+    );
+    this.usuarioService.deleteUsuario().subscribe(
+      data => {
+        this.usuarioDelete = data;
+        console.log('DELETE:');
+        console.log(this.usuarioDelete);        
       }
     );
   }
