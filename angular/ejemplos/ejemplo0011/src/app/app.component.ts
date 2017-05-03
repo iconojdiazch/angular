@@ -7,9 +7,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title: string = 'app works!';
+  valores:string = '';
   imagenUrl: string = "http://lorempixel.com/400/200/animals";
   activo: boolean = true;  
   onClick(evento){
     console.log("Pulsado",evento);
+  }    
+  onKeyUp(valor: string) {
+    this.valores += valor + ' | ';
   }
 }

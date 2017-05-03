@@ -1,18 +1,18 @@
-<h1>
-  {{title}}
-</h1>
-<h2>Abrir la consola del navegador</h2>
-<h2>Ejemplo de enlace de propiedades (Property Binding)</h2>
+<h3>Ejemplo de enlace de propiedades (Property Binding)</h3>
+<h3>Abrir la consola del navegador</h3>
 <img src="{{imagenUrl}}" alt="Imagen de ejemplo" />
-<h2>Ejemplo de enlace con clases CSS</h2>
+<h3>Uso estándar de clases CSS</h3>
 <button class="btn btn-primary">Enviar</button>
-<h2>Ejemplo de enlace condicional con clases CSS</h2>
+<h3>Ejemplo de enlace condicional con clases CSS</h3>
 <button class="btn btn-primary" [class.active]="activo">Enviar condicional</button>
-<h2>Ejemplo de enlace con estilos CSS</h2>
+<h3>Ejemplo de enlace con estilos CSS</h3>
 <button class="btn btn-primary" [style.backgroundColor]="activo ? 'blue':'gray'">Enviar estilos</button>
-<h2>Ejemplo de uso de eventos</h2>
+<h3>Ejemplo de uso de eventos</h3>
 <button class="btn btn-primary" (click)="onClick($event)">Ver consola</button>
-<h2>Ejemplo de uso de eventos. Sintaxis alternativa</h2>
-<button class="btn btn-primary" (click)="onClick($event)">Ver consola</button>
-<h2>Ejemplo de enlace de propiedades bidireccional (Two-way Binding)</h2>
+<h3>Ejemplo de uso de eventos. Sintaxis alternativa</h3>
+<button class="btn btn-primary" on-click="onClick($event)">Ver consola</button>
+<h3>Ejemplo de enlace de propiedades bidireccional (Two-way Binding)</h3>
 <input type="text" [(ngModel)]="title" /> Has escrito: {{title}}
+<h3>Ejemplo del uso de variables de plantilla (template reference variales)</h3>
+<input #texto (keyup)="onKeyUp(texto.value)">
+<p>{{valores}}</p>

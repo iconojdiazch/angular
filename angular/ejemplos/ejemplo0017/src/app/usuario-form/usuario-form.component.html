@@ -1,6 +1,6 @@
 <div class="container">
   <h1>Usuario Form</h1>
-  <form>
+  <form (ngSubmit)="onSubmit()">
     <div class="form-group">
       <label for="nombre">Nombre</label>
       <input type="text" class="form-control" id="nombre" required [(ngModel)]="modelo.nombre" name="nombre">
@@ -11,10 +11,10 @@
     </div>
     <div class="form-group">
       <label for="pais">País</label>
-      <!--<input type="text" class="form-control" id="pais" [(ngModel)]="modelo.pais" name="pais">-->
-      <input type="text" class="form-control" id="pais">
+      <input type="text" class="form-control" id="pais" [(ngModel)]="modelo.pais" name="pais">
+      <!--<input type="text" class="form-control" id="pais">-->
       <select class="form-control" id="pais" [(ngModel)]="modelo.pais" name="pais">
-<option *ngFor="let pais of paises" [value]="pais">{{pais}}</option>
+<option *ngFor="let pais of paises; let i = index" [value]="pais">{{i+1}}.-{{pais}}</option>
 </select>
     </div>
     <button type="submit" class="btn btn-default">Enviar</button>

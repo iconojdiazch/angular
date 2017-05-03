@@ -9,10 +9,11 @@ import { Usuario } from './../usuario';
 export class UsuarioFormComponent implements OnInit {
   private paises: string[] = ['España', 'Alemania',
     'Francia', 'Austria'];
-  private modelo: Usuario = new Usuario('', '', '');
+  private modelo: Usuario = new Usuario('abc', 'def@xyz.com', 'España');
   private enviado: boolean = false;
   onSubmit(): void {
     this.enviado = true;
+    console.log('Formulario enviado');
   }
   constructor() { }
 
