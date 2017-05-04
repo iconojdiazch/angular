@@ -1,0 +1,10 @@
+<form (ngSubmit)="enviar()">
+  <label for="nombre">Nombre</label>
+  <input type="text" placeholder="Introduce tu nombre" id="nombre" required [(ngModel)]="texto" name="nombre">
+  <input type="submit" value="Enviar">
+</form>
+<div>
+  Contenido del nombre:
+  <label *ngIf="texto.length == 0; else elseBlock">No hay texto</label>
+  <ng-template #elseBlock>{{texto}}</ng-template>
+</div>

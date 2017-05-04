@@ -8,9 +8,9 @@ import { Usuario } from './usuario';
 @Injectable()
 export class UsuarioService {
   private usuarioGetUrl = 'https://jsonplaceholder.typicode.com/posts/1';
-  private usuarioPostUrl = 'http://jsonplaceholder.typicode.com/posts';
-  private usuarioPutUrl = 'http://jsonplaceholder.typicode.com/posts/1';
-  private usuarioDeleteUrl = 'http://jsonplaceholder.typicode.com/posts/1';
+  private usuarioPostUrl = 'https://jsonplaceholder.typicode.com/posts';
+  private usuarioPutUrl = 'https://jsonplaceholder.typicode.com/posts/1';
+  private usuarioDeleteUrl = 'https://jsonplaceholder.typicode.com/posts/1';
   constructor(private http: Http) { }
   getUsuario() {
     return this.http.get(this.usuarioGetUrl).map(response => response.json() as Usuario);
