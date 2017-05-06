@@ -1,0 +1,17 @@
+<h1>
+  {{title}}
+</h1>
+<div class="panel panel-primary">
+  <div class="panel-heading">Url de un API de Wikipedia</div>
+  <div class="panel-body text-danger mia">{{url}}</div>
+</div>
+<div class="panel panel-primary">
+  <div class="panel-heading">Buscar en Wikipedia</div>
+  <div class="panel-body">
+    <p class="text-success mia">La búsqueda se ejecuta cada vez que pulsamos una tecla</p>
+    <input #termino (keyup)="buscar(termino.value)" />
+    <ul>
+      <li *ngFor="let item of items | async"><label class="text-danger mia">{{item}}</label></li>
+    </ul>
+  </div>
+</div>

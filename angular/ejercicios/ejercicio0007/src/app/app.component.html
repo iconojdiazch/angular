@@ -1,0 +1,18 @@
+<h1>
+  {{title}}
+</h1>
+<button (click)='saberMas()'>Mostrar-Ocultar</button>
+<div *ngIf='masInfo'>
+  <a href="https://www.pexels.com/" target="_blank">
+<img src="assets/imagenes/gato.jpg" title="Gato persa" alt="Gato persa con ojos azules" />
+</a>
+  <ul *ngFor='let mensaje of mensajes'>
+    <li>{{mensaje}}</li>
+  </ul>
+</div>
+<nav>
+  <a routerLink="/primero">Primer componente</a>
+  <a routerLink="/segundo">Segundo componente</a>
+  <a routerLink="/tercero">Forzar un error</a>
+</nav>
+<router-outlet></router-outlet>

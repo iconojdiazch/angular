@@ -1,0 +1,6 @@
+{
+    "url": "http://es.wikipedia.org/w/api.php",
+    "action": "opensearch",
+    "format":"json",
+    "callback":"JSONP_CALLBACK"
+}
