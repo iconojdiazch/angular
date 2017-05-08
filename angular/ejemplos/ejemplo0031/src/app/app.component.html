@@ -5,13 +5,15 @@
   <div class="panel-heading">Url de un API de Wikipedia</div>
   <div class="panel-body text-danger mia">{{url}}</div>
 </div>
-<div class="panel panel-primary">
+<button (click)="cambiar()">Mostrar-Ocultar búsqueda</button>
+<div class="panel panel-primary" *ngIf="mostrar">
   <div class="panel-heading">Buscar en Wikipedia</div>
   <div class="panel-body">
     <p class="text-success mia">La búsqueda se ejecuta cada vez que pulsamos una tecla</p>
-    <input #termino (keyup)="buscar(termino.value)" />
+    <input #termino (keyup)="buscar(termino.value)" placeholder="¿Qué buscas?" />
     <ul>
       <li *ngFor="let item of items | async"><label class="text-danger mia">{{item}}</label></li>
     </ul>
   </div>
 </div>
+<app-wiki-optimizado></app-wiki-optimizado>

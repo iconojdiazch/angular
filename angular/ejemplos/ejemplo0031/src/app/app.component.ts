@@ -13,6 +13,10 @@ import {Observable} from 'rxjs/Observable';
 export class AppComponent implements OnInit {
   private title: string = 'app works!';
   private url: string;
+  private mostrar:boolean=true;
+  cambiar(){
+    this.mostrar = !this.mostrar;
+  }
   constructor(private initService: InitService, private wikiService: WikiService) { }
   ngOnInit(): void {
     this.initService.getWikiUrl().subscribe(

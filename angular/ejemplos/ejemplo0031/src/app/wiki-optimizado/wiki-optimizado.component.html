@@ -1,0 +1,14 @@
+<button (click)="cambiar()">Mostrar-Ocultar búsqueda optimizada</button>
+<div class="panel panel-primary" *ngIf="mostrar">
+  <div class="panel-heading">Buscar en Wikipedia Optimizado</div>
+  <div class="panel-body">
+    <p class="text-success mia">
+      La búsqueda se ejecuta cada vez que pulsamos una tecla,
+      pero enviamos muchas menos peticiones al servidor
+    </p>
+    <input #termino (keyup)="buscar(termino.value)" placeholder="¿Qué buscas?"/>
+    <ul>
+      <li *ngFor="let item of items | async"><label class="text-danger mia">{{item}}</label></li>
+    </ul>
+  </div>
+</div>

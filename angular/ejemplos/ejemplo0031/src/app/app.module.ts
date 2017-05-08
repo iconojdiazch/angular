@@ -7,10 +7,12 @@ import { AppComponent } from './app.component';
 
 import { InitService } from './init.service';
 import { WikiService } from './wiki.service';
+import { WikiOptimizadoComponent } from './wiki-optimizado/wiki-optimizado.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    WikiOptimizadoComponent
   ],
   imports: [
     BrowserModule,
