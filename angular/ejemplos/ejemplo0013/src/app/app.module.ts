@@ -4,9 +4,10 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
-import { RatingComponent } from './rating.component';
-import { ProductoComponent } from './producto.component';
-import { ProductosComponent } from './productos.component';
+import { RatingComponent } from './rating/rating.component';
+import { ProductoComponent } from './producto/producto.component';
+import { ProductosComponent } from './productos/productos.component';
+import { ProductoService } from './producto.service';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,7 @@ import { ProductosComponent } from './productos.component';
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [ProductoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
