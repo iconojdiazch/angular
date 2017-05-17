@@ -45,14 +45,14 @@ describe('AppComponent', () => {
   });
 
   it('no debería mostrar nada en la página antes de la ejecución de "OnInit"', () => {
-    expect(el.textContent).toBe('', 'nothing displayed');
-    expect(spy.calls.any()).toBe(false, 'getQuote not yet called');
+    expect(el.textContent).toBe('', 'no hay nada');
+    expect(spy.calls.any()).toBe(false, 'getQuote aún no ha sido invocado');
   });
   it('después de que el componente se inicialize, no deberíamos var nada tampoco', () => {
     fixture.detectChanges();
     // getQuote es asíncrono: aún no ha devuelto nada
-    expect(el.textContent).toBe('...', 'no quote yet');
-    expect(spy.calls.any()).toBe(true, 'getQuote called');
+    expect(el.textContent).toBe('...', 'no hay nada');
+    expect(spy.calls.any()).toBe(true, 'getQuote invocado');
   });
   it('debería mostrar el nuevo valor una vez que la promesa resuelva (usando async)', async(() => {
     fixture.detectChanges();
