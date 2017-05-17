@@ -13,15 +13,22 @@ describe('Operaciones matemáticas con un array de números', () => {
     beforeEach(
         () => {
             const iterador = secuenciaInfinita();
-            numeros = Array(10).fill(0).map(()=>iterador.next().value);
+            numeros = Array(10).fill(0).map(() => iterador.next().value);
             console.log('Contenidos del array de números:' + numeros);
         }
     );
-    afterEach(() => { numeros = [] });
+    afterEach(() => { numeros = []; });
     it('La suma de los números pares del array debería ser un número par',
         () => {
+            // Paso a paso
+            // let filtrar = (x: number) => (x % 2 === 0);
+            // let reducir = (x: number, y: number) => x + y;
+            // const valor1 = numeros.filter(filtrar).reduce(reducir);
+            // console.log("La suma de los elementos pares del array es " + valor1);
+
+            // El mismo cálculo en un único paso
             const valor = numeros.filter(x => x % 2 === 0).reduce((x, y) => x + y);
-            console.log("La suma de los elementos pares del array es " + valor);
+            console.log('La suma de los elementos pares del array es ' + valor);
             expect(valor % 2 === 0).toBe(true);
         }
     );
