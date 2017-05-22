@@ -4,17 +4,16 @@
  * @suppress {suspiciousCode,uselessCode,missingProperties,missingOverride}
  */
 /* tslint:disable */
-"use strict";
 var __extends = (this && this.__extends) || function (d, b) {
     for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
-var import0 = require("@angular/core");
-var import1 = require("../../../src/app/app.module");
-var import2 = require("@angular/common");
-var import3 = require("@angular/platform-browser");
-var import4 = require("./app.component.ngfactory");
+import * as import0 from '@angular/core';
+import * as import1 from '../../../src/app/app.module';
+import * as import2 from '@angular/common';
+import * as import3 from '@angular/platform-browser';
+import * as import4 from './app.component.ngfactory';
 var AppModuleInjector = (function (_super) {
     __extends(AppModuleInjector, _super);
     function AppModuleInjector(parent) {
@@ -309,6 +308,5 @@ var AppModuleInjector = (function (_super) {
     };
     return AppModuleInjector;
 }(import0.ɵNgModuleInjector));
-exports.AppModuleNgFactory = new import0.NgModuleFactory(AppModuleInjector, import1.AppModule);
-//# sourceMappingURL=data:application/json;base64,eyJmaWxlIjoiQzovVXNlcnMvdXN1YXJpby9naXQvYW5ndWxhcjIvYW5ndWxhci9wcm9kdWNjaW9uL2VqZW1wbG9Qcm9kMDAwMS9zcmMvYXBwL2FwcC5tb2R1bGUubmdmYWN0b3J5LnRzIiwidmVyc2lvbiI6Mywic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsibmc6Ly8vQzovVXNlcnMvdXN1YXJpby9naXQvYW5ndWxhcjIvYW5ndWxhci9wcm9kdWNjaW9uL2VqZW1wbG9Qcm9kMDAwMS9zcmMvYXBwL2FwcC5tb2R1bGUudHMiXSwic291cmNlc0NvbnRlbnQiOlsiICJdLCJtYXBwaW5ncyI6IkFBQUE7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7In0=
+export var AppModuleNgFactory = new import0.NgModuleFactory(AppModuleInjector, import1.AppModule);
 //# sourceMappingURL=app.module.ngfactory.js.map

@@ -16,11 +16,11 @@ import { Subject } from 'rxjs/Subject';
 export class WikiOptimizadoComponent implements OnInit {
   constructor(private wikiService: WikiService) { }
 
-  private items: Observable<string[]>;
-  private canalTerminos = new Subject<string>();
+  items: Observable<string[]>;
+  canalTerminos = new Subject<string>();
   buscar(termino: string) { this.canalTerminos.next(termino); }
 
-  private mostrar: boolean = true;
+  mostrar: boolean = true;
   cambiar() {
     this.mostrar = !this.mostrar;
   }

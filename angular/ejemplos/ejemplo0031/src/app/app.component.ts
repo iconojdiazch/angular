@@ -11,9 +11,9 @@ import {Observable} from 'rxjs/Observable';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  private title: string = 'app works!';
-  private url: string;
-  private mostrar:boolean=true;
+  title: string = 'app works!';
+  url: string;
+  mostrar:boolean=true;
   cambiar(){
     this.mostrar = !this.mostrar;
   }
