@@ -6,8 +6,7 @@ import { QuoteService } from './quote.service';
   template: '<p class="quote"><i>{{quote}}</i></p>',
   styles:['.quote{color: blue;}']
 })
-export class AppComponent implements OnInit {
-  intervalId: number;
+export class AppComponent implements OnInit {  
   quote: string = '...';
   constructor(private quoteService: QuoteService) { }
   ngOnInit(): void {
