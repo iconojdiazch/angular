@@ -13,6 +13,6 @@ export class BotonNavegacionComponent implements OnInit {
   }
 
   navegar() {
-    location.href = 'https://google.es';
+    window.location.href = 'https://google.es';
   }
 }

@@ -2,8 +2,6 @@ import { TestBed, async } from '@angular/core/testing';
 
 import { AppComponent } from './app.component';
 
-import { TestComponent } from './test/test.component';
-
 import { TestService } from './test.service'
 
 describe('AppComponent', () => {
@@ -13,7 +11,7 @@ describe('AppComponent', () => {
     };
     TestBed.configureTestingModule({
       declarations: [
-        AppComponent, TestComponent
+        AppComponent
       ],
       //providers: [TestService],
       providers: [{ provide: TestService, useValue: testServiceStub }]

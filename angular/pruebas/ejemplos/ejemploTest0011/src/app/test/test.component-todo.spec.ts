@@ -41,15 +41,18 @@ describe('PruebaComponent', () => {
   it('La directiva debería emplearse en tres elementos de la plantilla html', () => {
     expect(des.length).toBe(3);
   });
+
   it('El color del primer h2 debería ser "yellow"', () => {
     const bgColor = des[0].nativeElement.style.backgroundColor;
     expect(bgColor).toBe('yellow');
   });
+
   it('El color del segundo h2 debería ser el valor por defecto', () => {
     const dir = des[1].injector.get(ResaltarDirective);
     const bgColor = des[1].nativeElement.style.backgroundColor;
     expect(bgColor).toBe(dir.porDefecto);
   });
+
   it('debería enlazar el valor del campo input con el color de fondo', () => {
     const input = des[2].nativeElement as HTMLInputElement;
     expect(input.style.backgroundColor).toBe('cyan', 'color de fondo inicial');
@@ -59,6 +62,7 @@ describe('PruebaComponent', () => {
     fixture.detectChanges();
     expect(input.style.backgroundColor).toBe('green', 'color de fondo cambiado');
   });
+  
   it('el elemento h2 sin directiva no debería tener ninguna propiedad arbitraria', () => {
     expect(h2SinDirectiva.properties['arbitraria']).toBeUndefined();
   });

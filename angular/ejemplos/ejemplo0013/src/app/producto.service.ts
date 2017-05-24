@@ -1,32 +1,29 @@
 import { Injectable } from '@angular/core';
+import { MOCK_DATOS, Data } from './datos';
+import { Observable } from "rxjs/Observable";
+import 'rxjs/add/operator/delay';
 
 @Injectable()
-export class ProductoService {  
-  getProductos() {
-    return [
-      {
-        imagenUrl: "http://loremflickr.com/150/150?random=1",
-        nombre: "Mascota 1",
-        fecha: "Mayo 31, 2016",
-        descripcion: "Cras sit amet nibh libero, in gravida... ",
-        rating: 4,
-        revisiones: 2
-      },
-      {
-        imagenUrl: "http://loremflickr.com/150/150?random=2",
-        nombre: "Mascota 2",
-        fecha: "Octubre 31, 2016",
-        descripcion: "Cras sit amet nibh libero, in gravida... ",
-        rating: 2,
-        revisiones: 12
-      },
-      {
-        imagenUrl: "http://loremflickr.com/150/150?random=3",
-        nombre: "Mascota 3",
-        fecha: "Febrero 30, 2016",
-        descripcion: "Cras sit amet nibh libero, in gravida... ",
-        rating: 5,
-        revisiones: 2
-      }];
+export class ProductoService {
+  // Este método es síncrono. Cuando lo invocamos, Angular se ve
+  // Obligado a esperar a que termine, y eso afecta al tiempo  
+  // de carga de la página.
+  // En un caso más realista, se debería retornar una promesa u observable,  
+  getProductos(): Data[] {
+    return MOCK_DATOS;
+  }
+
+  getProductosAsync(): Promise<Data[]> {
+    return Promise.resolve(MOCK_DATOS);
+  }
+
+  // El método delay permite simular un retardo
+  getProductosObservable(): Observable<Data> {
+    return Observable.create(
+      observer => {
+        MOCK_DATOS.map(elemento => observer.next(elemento))
+        observer.complete();
+      }
+    ).delay(100);
   }
 }
