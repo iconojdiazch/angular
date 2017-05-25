@@ -1,6 +1,6 @@
 # El tour de los héroes
 
-Cortesía de https://github.com/johnpapa/angular-tour-of-heroes.git
+Partiendo del proyecto ../toh, modificado para producción
 
 ### Tutorial oficial de Angular
 
