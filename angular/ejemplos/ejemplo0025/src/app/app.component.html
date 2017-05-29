@@ -3,7 +3,7 @@
 </h1>
 <h2>Información obtenida desde la base de datos remota</h2>
 <ul>
-  <li class="text" *ngFor="let usuario of usuarios | async">
+  <li *ngFor="let usuario of usuarios | async">
     {{usuario.name}}, {{usuario.email}}
   </li>
 </ul>

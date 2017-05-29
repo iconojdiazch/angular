@@ -4,6 +4,7 @@ import { UsuarioService } from './usuario.service';
 
 import { HttpModule } from '@angular/http';
 import { async } from "@angular/core/testing";
+import { Usuario } from "app/usuario";
 
 describe('UsuarioService', () => {
   beforeEach(() => {
@@ -27,5 +28,17 @@ describe('UsuarioService', () => {
       }
     )
   )
+  );
+
+  it('el objeto devuelto debería tener un id', async(
+    inject(
+      [UsuarioService],
+      (service: UsuarioService) => {
+        service.getUsuario().subscribe(
+          dato => expect((dato as Usuario).id).toBeTruthy()
+        );
+      }
+    )
   )
+  );
 });

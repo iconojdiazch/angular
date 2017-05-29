@@ -7,8 +7,7 @@ import { SpotifyService } from './../spotify.service';
   templateUrl: './spotify.component.html',
   styleUrls: ['./spotify.component.css']
 })
-export class SpotifyComponent implements OnInit {
-  title: string = 'app works!';
+export class SpotifyComponent implements OnInit {  
   cargando: boolean = true;
   artistas = [];
   constructor(private spotifyService: SpotifyService) { }

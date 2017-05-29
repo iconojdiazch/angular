@@ -1,0 +1,9 @@
+Instalamos dependencias en:
+angular\ejemplos\ejemplo0016
+angular\ejemplos\ejemplo0018
+angular\ejemplos\ejemplo0021
+angular\ejercicios\ejercicio0007
+angular\ejemplos\ejemplo0024
+angular\ejemplos\ejemplo0030
+angular\ejemplos\ejemplo0025
+angular\ejemplos\ejemplo0026
