@@ -28,3 +28,7 @@ function mostrar(n: any): void {
 //Para ver los valores de las variables, emplear la función mostrar
 mostrar(nueve);
 mostrar(cuatro[0]);
+//Los parámetros de las funciones pueden tener valores por defecto
+function trece(p: string = 'abc'): string {
+    return p.toUpperCase();
+}
