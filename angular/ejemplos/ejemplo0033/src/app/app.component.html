@@ -1,0 +1,32 @@
+<div class="container">
+  <h1>
+    {{title}}
+  </h1>
+  <h2>Abrir la consola del navegador</h2>
+  <h3>Resultados desde GitHub</h3>
+  <div *ngIf="cargando">
+    <i class="fa fa-spinner fa-spin fa-3x">Cargando...</i>
+    <span class="sr-only">Cargando...</span>
+  </div>
+
+  <div *ngFor="let repo of repos">
+    <div class="panel-warning">
+      <div class="panel-heading">
+        <a href="{{ repo.html_url }}" target="_blank">{{ repo.name }}</a>
+      </div>
+      <div class="panel-body">
+        <ul>
+          <li>
+            Id: {{repo.id}}
+          </li>
+          <li>
+            Nombre completo: {{repo.full_ane}}
+          </li>
+          <li>
+            Url: {{ repo.html_url }}
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
