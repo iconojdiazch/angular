@@ -1,0 +1,13 @@
+$primario: brown;
+p{
+    color: blue;
+    span{
+        font-size: 2em;
+        color: $primario;
+    }
+}
+$primario: blue;
+span{
+    font-size: 3em;
+    color: $primario;
+}

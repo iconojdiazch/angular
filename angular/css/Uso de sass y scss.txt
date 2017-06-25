@@ -1,0 +1,4 @@
+ng new proyecto --style=sass
+URL de sass -> http://sass-lang.com/
+ng new proyecto --style=scss
+URL con información sobre scss -> https://www.funcion13.com/introduccion-a-sass-y-scss/
