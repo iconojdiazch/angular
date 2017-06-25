@@ -32,3 +32,14 @@ mostrar(cuatro[0]);
 function trece(p: string = 'abc'): string {
     return p.toUpperCase();
 }
+console.log(trece());
+
+//Los parámetros de las funciones pueden ser opcionales
+function catorce(p: string = 'abc', sufijo?: string): string {
+    if (sufijo) {
+        return (p + ' ' + sufijo).toUpperCase();
+    }
+    else return p.toUpperCase();
+}
+
+console.log(catorce('abc','def'));
