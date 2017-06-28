@@ -8,7 +8,8 @@
 <button class="btn btn-primary">Enviar</button>
 
 <h3>Ejemplo de enlace condicional con clases CSS</h3>
-<button class="btn btn-primary" [class.active]="activo">Enviar condicional</button>
+<button class="btn btn-primary" [class.mia]="esVisible">Enviar condicional</button>
+<button class="btn btn-primary" (click)='cambiarFondo()'>Cambiar fondo</button>
 
 <h3>Ejemplo de enlace con estilos CSS</h3>
 <button class="btn btn-primary" [style.backgroundColor]="activo ? 'blue':'gray'">Enviar estilos</button>
