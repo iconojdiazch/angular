@@ -2,13 +2,17 @@
 <h2>{{titulo}}</h2>
 <h3>Servicio basado en promesas</h3>
 <h3>
-    <ul *ngFor='let producto of lista'>
-        <li>Id: {{producto.id}}, Nombre: {{producto.nombre}}
+    <ul>
+        <li *ngFor='let producto of lista'>
+            Id: {{producto.id}}, Nombre: {{producto.nombre}}
+        </li>
     </ul>
 </h3>
 <h3>Servicio basado en observables</h3>
 <h3>
-    <ul *ngFor='let p of listaObservable | async'>
-        <li>Id: {{p.id}}, Nombre: {{p.nombre}}
+    <ul>
+        <li *ngFor='let p of listaObservable | async'>
+            Id: {{p.id}}, Nombre: {{p.nombre}}
+        </li>
     </ul>
 </h3>
