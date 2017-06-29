@@ -4,6 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 // Componentes
 import { PaisesComponent } from './paises/paises.component';
 import { CiudadesComponent } from './ciudades/ciudades.component';
+import { NoEncontradoComponent } from "app/no-encontrado/no-encontrado.component";
 
 // Configuración de las rutas
 const appRoutes: Routes = [
@@ -14,7 +15,8 @@ const appRoutes: Routes = [
     },
     { path: 'paises', component: PaisesComponent },
     { path: 'ciudades', component: CiudadesComponent },
-    { path: 'la-ciudad/:id', component: CiudadesComponent }
+    { path: 'la-ciudad/:id', component: CiudadesComponent },
+    {path: '**', component: NoEncontradoComponent}
 ];
 
 export const appRoutingProviders: any[] = [

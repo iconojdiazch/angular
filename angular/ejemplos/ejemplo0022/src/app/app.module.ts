@@ -8,12 +8,14 @@ import { PaisesComponent } from './paises/paises.component';
 import { CiudadesComponent } from './ciudades/ciudades.component';
 
 import { routing, appRoutingProviders } from './app.routing';
+import { NoEncontradoComponent } from './no-encontrado/no-encontrado.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PaisesComponent,
-    CiudadesComponent
+    CiudadesComponent,
+    NoEncontradoComponent
   ],
   imports: [
     BrowserModule,

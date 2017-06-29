@@ -10,7 +10,7 @@ export class AppComponent {
   private mensajes: string[] = [
     "Uso de fuentes alternativas (ver index.html)",
     "Empleo de estilos globales (ver styles.css)",
-    "Almacenamiento de imágemes en el directorio 'assets'"
+    "Almacenamiento de imágenes en el directorio 'assets'"
   ];
   private masInfo = false;
   saberMas(){
