@@ -1,0 +1,45 @@
+{
+    "artists": {
+        "items": [
+            {
+                "id": 1,
+                "name": "Nombre uno",
+                "followers": {
+                    "total": 1000
+                },
+                "popularity": 67,
+                "images": [
+                    {"url":""},
+                    {"url":""},
+                    {"url":"http://lorempixel.com/400/200/abstract/1"}
+                ]
+            },
+            {
+                "id": 2,
+                "name": "Nombre dos",
+                "followers": {
+                    "total": 1276
+                },
+                "popularity": 45,
+                "images": [
+                    {"url":""},
+                    {"url":""},
+                    {"url":"http://lorempixel.com/400/200/abstract/2"}
+                ]
+            },
+            {
+                "id": 3,
+                "name": "Nombre tres",
+                "followers": {
+                    "total": 10000
+                },
+                "popularity": 98,
+                "images": [
+                    {"url":""},
+                    {"url":""},
+                    {"url":"http://lorempixel.com/400/200/abstract/3"}
+                ]
+            }
+        ]
+    }
+}
