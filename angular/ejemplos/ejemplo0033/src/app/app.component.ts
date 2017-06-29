@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { GithubService } from './github.service';
 
 type GitInfo = {
@@ -13,15 +13,15 @@ type GitInfo = {
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit {
+export class AppComponent{
   title = 'app works!';
   repos: GitInfo[];
   cargando: boolean = true;
 
   constructor(private githubService: GithubService) { }
 
-  ngOnInit(): void {
-    this.githubService.getRepos().subscribe(
+  reposUsuario(nombre: string): void {
+    this.githubService.getReposUsuario(nombre).subscribe(
       data => {
         this.cargando = false;
         this.repos = data;

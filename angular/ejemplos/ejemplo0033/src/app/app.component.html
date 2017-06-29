@@ -3,12 +3,12 @@
     {{title}}
   </h1>
   <h2>Abrir la consola del navegador</h2>
+  <input type='text' placeholder="Usuario de GitHub" #texto (keyup.enter)='reposUsuario(texto.value)' />
   <h3>Resultados desde GitHub</h3>
   <div *ngIf="cargando">
     <i class="fa fa-spinner fa-spin fa-3x">Cargando...</i>
     <span class="sr-only">Cargando...</span>
   </div>
-
   <div *ngFor="let repo of repos">
     <div class="panel-warning">
       <div class="panel-heading">
@@ -20,7 +20,7 @@
             Id: {{repo.id}}
           </li>
           <li>
-            Nombre completo: {{repo.full_ane}}
+            Nombre completo: {{repo.full_name}}
           </li>
           <li>
             Url: {{ repo.html_url }}
