@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <title>Instrucciones</title>
+  <base href="/">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+
+<body>
+  <div>
+    <h3>Documentación de apoyo:</h3>
+    <ol>
+      <li><a href="https://angular.io/guide/i18n">Guía oficial</a></li>
+      <li><a href="https://angular-2-training-book.rangle.io/handout/i18n/">Libro sobre Angular</a></li>
+    </ol>
+    <p>
+      Aquí tenéis los conceptos, que siempre son válidos. El procedimiento a seguir que proponen estas dos documentaciones a mí
+      no me funciona. Así que tenemos una tercera fuente:
+    </p>
+    <ol>
+      <li><a href="http://blog.danieleghidoli.it/2017/01/15/i18n-angular-cli-aot/">Tercera posibilidad</a></li>
+    </ol>
+  </div>
+  <div>
+    <h3>Para ver el programa en acción, desde una consola ejecutad:</h3>
+    <code>ng build --aot --locale es --18n-file src/locale/messages.es.xtb --i18n-format xtb</code>
+    <h3>Esto construye una versión compilada de producción (más o menos) de la aplicación con los mensajes traducidos al español</h3>
+    <h3>La orden</h3>
+    <code>ng serve -o --aot --locale es --i18n-file src/locale/messages.es.xtb --i18n-format xtb</code>
+    <h3>os la mostrará en http://localhost:4200 </h3>
+    <p>Tal y como Angular2 implementa esto a día de hoy, cada versión internacionalizada de vuestra aplicación es una aplicación
+      distinta. Así que si tenéis dos idiomas, digamos español e inglés, habría que hacer algo así: http://www.abc.com/miapp/es
+      (para el español) y http://www.abc.com/miapp/en para el inglés. Por tanto sería necesario arbitrar algún mecanismo
+      para que el usuario final pudiera acceder a ambas versiones.
+    </p>
+  </div>
+</body>
+
+</html>
