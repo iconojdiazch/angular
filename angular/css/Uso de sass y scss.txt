@@ -1,4 +1,5 @@
 ng new proyecto --style=sass
 URL de sass -> http://sass-lang.com/
 ng new proyecto --style=scss
-URL con información sobre scss -> https://www.funcion13.com/introduccion-a-sass-y-scss/
+URL con informaciÃ³n sobre scss -> https://www.funcion13.com/introduccion-a-sass-y-scss/
+Angulat tiene soporte nativo para sccs
