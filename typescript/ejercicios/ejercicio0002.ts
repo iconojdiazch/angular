@@ -1,5 +1,5 @@
 type Producto = { id: number, n: string };
-const traza: (any) => void = n => console.log(n);
+const traza: <T>(T) => void = n => console.log(n);
 const productos: Producto[] = [
     { id: 1, n: 'abc' },
     { id: 2, n: 'def' },

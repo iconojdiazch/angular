@@ -1,6 +1,6 @@
 const valores: number[] = [1, 2, 3];
 function mediaUno(n: number[]): number {
-    //ES6 y siguientes automáticamente emplerán 'tail recursion en esta función
+    //ES6 y siguientes automáticamente emplerán 'tail recursion' en esta función
     function reducir(acc: number, array: number[]): number {
         if (array.length === 0)
             return acc;
