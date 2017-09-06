@@ -1,0 +1,49 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 col-sm-12">
+      <h1>
+        <a href="#" data-toggle="modal" data-target="#instrucciones">Gestión de incidencias</a>
+      </h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6 col-sm-12">
+      <app-issue-form></app-issue-form>
+    </div>
+    <div class="col-md-6 col-sm-12">
+      <app-issue-list></app-issue-list>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12 col-sm-12">
+      <h1>Integración con BootStrap 3 y JQuery</h1>
+    </div>
+  </div>
+  <!-- Diálogo modal -->
+  <div class="modal fade" id="instrucciones" role="dialog">
+    <div class="modal-dialog">      
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Instrucciones</h4>
+        </div>
+        <div class="modal-body">
+          <ol>
+            <li>Crear la app: <code>ng new ejercicio0008 --skip-install --skip-git</code></li>
+            <li><code>cd ejercicio0008</code></li>
+            <li>Instalar paquetes:<code>yarn add bootstrap3@ jquery angular2-uuid</code></li>
+            <li>Comprobar la instalación:<code>yarn</code></li>
+            <li>Arrancar la app:<code>ng serve -o</code></li>
+            <li>Parar la app: <code>CTRL+C</code></li>
+            <li>Crear una versión de producción:<code>ng build -prod</code></li>
+            <li>Ir al directorio de distribución:<code>cd dist</code></li>
+            <li>Publicar la app en Internet:<code>surge</code></li>
+          </ol>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,6 @@
+Crear el proyecto con ng new --skip-install --skip-git ejercicio0008
+cd ejercicio0008
+yarn add bootstrap3@ jquery angular2-uuid
+Para crear un identificador único:
+1.- Importar el componente: import { UUID } from 'angular2-uuid';
+2.- Obtener el id: let uuid = UUID.UUID();

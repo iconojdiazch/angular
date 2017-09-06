@@ -1,0 +1,8 @@
+<div *ngIf="issues.length === 0; else elseBlock">
+  <div class="well">No se encuentran incidencias</div>
+</div>
+<ng-template #elseBlock>
+  <span *ngFor="let issue of issues">
+      <app-issue [issue]=issue></app-issue>
+  </span>
+</ng-template>

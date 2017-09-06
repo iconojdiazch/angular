@@ -1,0 +1,12 @@
+<div class="well">
+  <button type="button" class="btn btn-primary btn-block" data-toggle="collapse" [attr.data-target]="identHash">{{issue.descripcion}}</button>
+  <div [attr.id]="ident" class="collapse">
+    <h6>Issue ID: {{issue.id}}</h6>
+    <p><span class="label label-info">{{issue.status}}</span></p>
+    <h3>{{issue.descripcion}}</h3>
+    <p><span class="glyphicon glyphicon-time"></span>{{issue.severidad}}
+      <span class="glyphicon glyphicon-user"></span>&nbsp;{{issue.responsable}}</p>
+    <a href="#" class="btn btn-warning" (click)="cambiarStatus(issue.id)">Cerrar</a>
+    <a href="#" class="btn btn-danger" (click)="borrar(issue.id)">Borrar</a>
+  </div>
+</div>

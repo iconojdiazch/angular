@@ -1,0 +1,8 @@
+/* You can add global styles to this file, and also import other style files */
+h2{
+    font-size: 2em;
+    color:blue
+}
+h2.mia{
+    color:red
+}
