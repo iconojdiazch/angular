@@ -1,1 +1,1 @@
-for /D %%s in (.\*) do (cd %%s && yarn && cd ..)
+for /D %%s in (.\*) do (cd %%s && npm install && cd ..)
