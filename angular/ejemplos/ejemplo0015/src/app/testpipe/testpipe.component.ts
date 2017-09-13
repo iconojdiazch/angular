@@ -12,7 +12,7 @@ export class TestpipeComponent implements OnInit {
   ngOnInit() {
     this.productos = [
       {
-        foto: "http://loremflickr.com/150/150?random=1",
+        foto: "http://lorempixel.com/output/animals-q-c-400-200-9.jpg",
         nombre: "Producto 1",
         fecha: new Date(2017, 0, 30),
         descripcion: "Descripción del producto uno"

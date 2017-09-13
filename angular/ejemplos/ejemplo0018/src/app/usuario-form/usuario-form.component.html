@@ -19,7 +19,7 @@
       <label for="pais">País</label>
       <input type="text" class="form-control" id="pais" [(ngModel)]="modelo.pais" name="pais">
       <!--<input type="text" class="form-control" id="pais">-->
-      <select class="form-control" id="pais" [(ngModel)]="modelo.pais" name="pais">
+      <select class="form-control" id="pais" [(ngModel)]="modelo.pais" name="pais" required>
 <option *ngFor="let pais of paises" [value]="pais">{{pais}}</option>
 </select>
     </div>

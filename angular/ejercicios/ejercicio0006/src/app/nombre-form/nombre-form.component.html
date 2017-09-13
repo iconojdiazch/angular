@@ -5,6 +5,6 @@
 </form>
 <div>
   Contenido del nombre:
-  <label *ngIf="texto.length == 0; else elseBlock">No hay texto</label>
+  <label *ngIf="texto.length === 0; else elseBlock">No hay texto</label>
   <ng-template #elseBlock>{{texto}}</ng-template>
 </div>

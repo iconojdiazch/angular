@@ -10,6 +10,7 @@ export class AppComponent {
   msg: string = 'Nada';
   principalMensaje = 'Mensaje enviado por el componente principal';
   mostrarMensaje(msg) {
+    console.log(`Ha llegado el mensaje: ${msg}`);
     this.msg = msg;
   }
 }

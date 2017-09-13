@@ -10,10 +10,13 @@ import { Router, ActivatedRoute } from '@angular/router';
 export class CiudadesComponent implements OnInit {
   public codigoPostal: number;
   private susbcripcion;
-  constructor(private route: ActivatedRoute, private router: Router) { }
+  constructor(private route: ActivatedRoute, private router: Router) {
+    console.log('En constructor de CiudadesComponent')
+   }
 
   ngOnInit() {
     // Recogemos los parametros de la URL
+    console.log('En ngOnInit de CiudadesComponent');
     this.susbcripcion = this.route.params.subscribe(params => {
       if (params['id'] != null) {
         this.codigoPostal = params['id'];
@@ -21,6 +24,7 @@ export class CiudadesComponent implements OnInit {
     });
   }
   ngOnDestroy() {
+    console.log('En ngOnDestroy de CiudadesComponent');
     this.susbcripcion.unsubscribe();
   }
   
