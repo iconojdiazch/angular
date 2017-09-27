@@ -1,0 +1,10 @@
+<h1>
+  Welcome to {{title}}!
+</h1>
+<h3>Creamos nosotros la subscripción al <code>Observable&lt;Usuario&gt;</code></h3>
+<h3 class='nosotros'>Datos del usuario: {{usuario | json}}</h3>
+<h3>Angular crea la subscripción al <code>Observable&lt;Usuario&gt;</code> usando <code>async</code></h3>
+<h2>userId: <span class='nosotros'>{{(usuarioObservable | async)?.userId}}</span></h2>
+<h2>id: <span class='nosotros'>{{(usuarioObservable | async)?.id}}</span></h2>
+<h2>Title: <span class='nosotros'>{{(usuarioObservable | async)?.title}}</span></h2>
+<h2>Body: <span class='nosotros'>{{(usuarioObservable | async)?.body}}</span></h2>
