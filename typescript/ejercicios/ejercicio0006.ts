@@ -9,7 +9,7 @@ abstract class PersonaGenerica implements PersistenteGenerica<PersonaGenerica> {
         return this;
     }
 }
-const dbGenerica: Persona[] = [];
+const dbGenerica: PersonaGenerica[] = [];
 
 class EmpleadoGenerico extends PersonaGenerica{
     constructor(n: string = 'abc') {
@@ -18,7 +18,7 @@ class EmpleadoGenerico extends PersonaGenerica{
     }
 }
 
-const personasGenericas: Persona[] = [new EmpleadoGenerico(), new EmpleadoGenerico('def')];
+const personasGenericas: PersonaGenerica[] = [new EmpleadoGenerico(), new EmpleadoGenerico('def')];
 personasGenericas.forEach(p => p.guardar());
 personasGenericas.forEach(p => console.log(p));
 
