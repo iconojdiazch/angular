@@ -1,0 +1,40 @@
+<h1>
+  {{title}}
+</h1>
+<h2> Datos recibidos del servidor remoto, petición GET:</h2>
+<div>
+  <ul>
+    <li>UserId: {{usuarioGet.userId}}</li>
+    <li>Id: {{usuarioGet.id}}</li>
+    <li>Title: {{usuarioGet.title}}</li>
+    <li>Body: {{usuarioGet.body}}</li>
+  </ul>
+</div>
+<h2> Datos recibidos del servidor remoto, petición POST:</h2>
+<div>
+  <ul>
+    <li>UserId: {{usuarioPost.userId}}</li>
+    <li>Id: {{usuarioPost.id}}</li>
+    <li>Title: {{usuarioPost.title}}</li>
+    <li>Body: {{usuarioPost.body}}</li>
+  </ul>
+</div>
+<h2> Datos recibidos del servidor remoto, petición PUT:</h2>
+<div>
+  <ul>
+    <li>UserId: {{usuarioPut.userId}}</li>
+    <li>Id: {{usuarioPut.id}}</li>
+    <li>Title: {{usuarioPut.title}}</li>
+    <li>Body: {{usuarioPut.body}}</li>
+  </ul>
+</div>
+<h2> Datos recibidos del servidor remoto, petición DELETE:</h2>
+<h3>Este API en concreto no devuelve nada</h3>
+<div>
+  <ul>
+    <li>UserId: {{usuarioDelete.userId || 'Nada'}}</li>
+    <li>Id: {{usuarioDelete.id || 'Nada'}}</li>
+    <li>Title: {{usuarioDelete.title || 'Nada'}}</li>
+    <li>Body: {{usuarioDelete.body || 'Nada'}}</li>
+  </ul>
+</div>
