@@ -1,0 +1,1 @@
+for /D %%s in (.\*) do (cd %%s && rmdir /S/Q node_modules && cd ..)
